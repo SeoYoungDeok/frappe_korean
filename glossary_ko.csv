@@ -1,0 +1,330 @@
+source,target,type,note
+# ── 1-1/1-2. 기초 영단어·업계 통용어 (영문 유지) ──,,,
+ID,ID,keep,
+URL,URL,keep,
+API,API,keep,
+PDF,PDF,keep,
+CSV,CSV,keep,
+Excel,Excel,keep,
+OK,OK,keep,
+PIN,PIN,keep,
+QR,QR,keep,
+SMS,SMS,keep,
+OTP,OTP,keep,"출현 12건"
+JSON,JSON,keep,"R1 결정: fieldtype 형식 미적용"
+HTML,HTML,keep,"R1 결정: fieldtype 형식 미적용"
+CSS,CSS,keep,
+SQL,SQL,keep,
+ERP,ERP,keep,
+CRM,CRM,keep,
+SLA,SLA,keep,
+SSO,SSO,keep,
+LDAP,LDAP,keep,"출현 37건"
+OAuth,OAuth,keep,"출현 20건"
+2FA,2FA,keep,
+IP,IP,keep,
+SMTP,SMTP,keep,
+IMAP,IMAP,keep,
+POP3,POP3,keep,
+# ── 1-3. 프레임워크 예약어 (영문 유지) ──,,,
+DocType,DocType,keep,"절대 번역 금지. 복수형 DocTypes도 DocType으로"
+Child Table,Child Table,keep,
+Child DocType,Child DocType,keep,
+Submittable,Submittable,keep,"Is Submittable 라벨 포함"
+Naming Series,Naming Series,keep,
+Custom Field,Custom Field,keep,
+Property Setter,Property Setter,keep,
+Client Script,Client Script,keep,
+Server Script,Server Script,keep,
+Print Format,Print Format,keep,"복수형 Print Formats도 Print Format으로"
+Letter Head,Letter Head,keep,
+Workspace,Workspace,keep,"출현 50건. 복수형 Workspaces도 Workspace로"
+Webhook,Webhook,keep,
+Module Def,Module Def,keep,
+DocField,DocField,keep,
+DocPerm,DocPerm,keep,
+Custom DocPerm,Custom DocPerm,keep,
+Report Builder,Report Builder,keep,
+Query Report,Query Report,keep,
+Script Report,Script Report,keep,
+Jinja,Jinja,keep,
+Redis,Redis,keep,
+MariaDB,MariaDB,keep,
+PostgreSQL,PostgreSQL,keep,
+DuckDB,DuckDB,keep,
+Frappe,Frappe,keep,"제품명"
+Frappe Cloud,Frappe Cloud,keep,"제품명"
+Typst,Typst,keep,"v16 인쇄 렌더러 이름. 출현 26건"
+QZ Tray,QZ Tray,keep,"외부 제품명"
+Google,Google,keep,"Google Calendar/Contacts/Drive 등 제품명은 'Google 캘린더'처럼 Google만 유지"
+docstatus,docstatus,keep,"코드 식별자일 때"
+Document Type,Document Type,keep,"R3 결정: 영문 유지 (원문 표기 보존). 복수형 Document Types도 Document Type으로"
+# ── 역할 이름 (R4 결정: 영문 유지) ──,,,
+System Manager,System Manager,keep,"역할 레코드 이름. 역할 목록에 영문으로 보이므로 일치시킴"
+Administrator,Administrator,keep,"기본 사용자/역할 이름"
+Guest,Guest,keep,"기본 역할 이름"
+Workspace Manager,Workspace Manager,keep,"역할 이름. 출현 25건"
+Website Manager,Website Manager,keep,"역할 이름"
+All,전체,context,"역할 이름 'All'일 때는 All 유지, 일반 '모두/전체'일 때는 번역"
+# ── 4-1. 문서 상태 (docstatus) — 확정 ──,,,
+Draft,임시저장,translate,"docstatus 0"
+Submit,확정,translate,"docstatus 버튼·권한. R2 결정: 대화상자 기본 버튼은 확인, 웹 폼은 제출(validate-ignore: A5)"
+Submitted,확정됨,translate,"상태 표시"
+Cancel,취소,translate,"docstatus 2 액션 = 대화상자 취소 버튼"
+Cancelled,취소됨,translate,
+Amend,수정본 작성,translate,"버튼·권한"
+Amended From,원본 문서,translate,"수정본이 참조하는 원본"
+Amendment,수정본,translate,
+Discard,폐기,translate,
+Discarded,폐기됨,translate,
+Approve,승인,translate,"워크플로우"
+Approved,승인됨,translate,
+Reject,반려,translate,"워크플로우"
+Rejected,반려됨,context,"워크플로우는 반려됨. Communication 전송 상태(Delivery Status)에서는 '거부됨'"
+Allow on Submit,확정 후 수정 허용,translate,
+Doc Status,문서 상태,translate,"docstatus 필드 라벨"
+# ── 4-2. 공통 UI 용어 (가이드 기본안) ──,,,
+Save,저장,translate,
+Delete,삭제,translate,
+New,새로 만들기,translate,"버튼 단독일 때. 'New {0}'은 '새 {0}'"
+Edit,편집,translate,
+Duplicate,복제,translate,
+Rename,이름 변경,translate,
+Refresh,새로고침,translate,
+Reload,새로고침,translate,
+Filter,필터,translate,
+Filters,필터,translate,
+Sort,정렬,translate,
+Group By,그룹 기준,translate,
+Assign To,담당자 지정,translate,
+Assigned To,담당자,translate,
+Owner,작성자,translate,
+Modified,수정일,translate,
+Modified By,수정자,translate,
+Created On,생성일,translate,
+Created By,작성자,translate,
+Last Updated,최근 수정,translate,
+Settings,설정,translate,
+Customize,사용자 정의,translate,
+Customize Form,양식 사용자 정의,translate,
+Permission,권한,translate,
+Permissions,권한,translate,
+Role,역할,translate,
+Roles,역할,translate,
+User,사용자,translate,
+Users,사용자,translate,
+Report,보고서,translate,
+Reports,보고서,translate,
+Dashboard,대시보드,translate,
+List View,목록 보기,translate,
+Report View,보고서 보기,translate,
+Kanban,칸반,translate,
+Mandatory,필수,translate,
+Default,기본값,translate,"출현 51건. 'Default X' 라벨은 '기본 X'"
+Enabled,사용,translate,
+Disabled,사용 안 함,translate,
+Attachment,첨부 파일,translate,
+Attachments,첨부 파일,translate,
+Comment,댓글,translate,
+Comments,댓글,translate,
+Timeline,타임라인,translate,
+Workflow,워크플로우,translate,
+Notification,알림,translate,
+Notifications,알림,translate,
+Module,모듈,translate,
+Import,가져오기,translate,
+Export,내보내기,translate,
+# ── 고빈도 용어 (main.pot 빈도 분석, 추가 제안) ──,,,
+Document,문서,translate,"출현 307건"
+Documents,문서,translate,
+Field,필드,translate,"출현 302건"
+Fields,필드,translate,
+Fieldname,필드명,translate,"출현 21건"
+Label,라벨,translate,"업계 관용 표기 '라벨' (국어원 '레이블')"
+Options,옵션,translate,
+Row,행,translate,"출현 163건"
+Rows,행,translate,
+Column,열,translate,
+Columns,열,translate,
+Value,값,translate,
+Values,값,translate,
+Record,레코드,translate,
+Records,레코드,translate,
+Name,이름,translate,
+Title,제목,translate,
+Type,유형,translate,
+Status,상태,translate,
+Description,설명,translate,
+Email,이메일,translate,"출현 248건"
+Email Account,이메일 계정,translate,
+Email Template,이메일 템플릿,translate,
+Email Queue,이메일 대기열,translate,
+Email Address,이메일 주소,translate,
+Login,로그인,translate,
+Log In,로그인,translate,
+Logout,로그아웃,translate,
+Sign Up,가입하기,translate,
+Account,계정,translate,
+Address,주소,translate,
+Contact,연락처,translate,
+File,파일,translate,
+Files,파일,translate,
+Folder,폴더,translate,
+Upload,업로드,translate,
+Download,다운로드,translate,
+Template,템플릿,translate,
+Format,형식,translate,
+Print,인쇄,translate,
+Print Settings,인쇄 설정,translate,
+Preview,미리보기,translate,
+Layout,레이아웃,translate,
+Section,섹션,translate,
+Tab,탭,translate,
+Sidebar,사이드바,translate,"출현 41건"
+Page,페이지,translate,
+Form,양식,translate,"Customize Form=양식 사용자 정의와 일치"
+View,보기,translate,
+Search,검색,translate,
+Global Search,전체 검색,translate,
+Add,추가,translate,
+Add Row,행 추가,translate,
+Create,생성,translate,
+Update,업데이트,translate,
+Remove,제거,translate,
+Insert,삽입,translate,
+Copy,복사,translate,
+Clear,지우기,translate,
+Reset,초기화,translate,
+Apply,적용,translate,
+Send,보내기,translate,
+Show,표시,translate,
+Hide,숨기기,translate,
+Close,닫기,translate,"버튼"
+Closed,종료됨,context,"ToDo/Event/Communication 상태값"
+Open,열기,context,"버튼은 '열기', 상태값(ToDo 등)은 '진행 중'"
+Enable,사용,translate,"'Enable X' 체크박스는 'X 사용'"
+Disable,사용 안 함,translate,
+Active,활성,translate,
+Inactive,비활성,translate,
+Required,필수,translate,
+Standard,표준,translate,
+Is Standard,표준,translate,
+Custom,사용자 정의,translate,
+System Settings,시스템 설정,translate,
+Error,오류,translate,
+Error Log,오류 로그,translate,
+Warning,경고,translate,
+Success,성공,translate,
+Failed,실패,translate,
+Log,로그,translate,
+Version,버전,translate,
+Activity,활동,translate,
+Assign,배정,translate,
+Assignment,배정,translate,
+Assignment Rule,배정 규칙,translate,
+Share,공유,translate,
+Shared,공유됨,translate,
+Follow,팔로우,translate,
+Like,좋아요,translate,
+Tag,태그,translate,
+Tags,태그,translate,
+Pin,고정,translate,
+Pinned,고정됨,translate,
+Calendar,캘린더,translate,
+Gantt,간트,translate,
+Event,일정,translate,
+ToDo,할 일,translate,
+Reminder,리마인더,translate,
+Note,메모,translate,
+Developer Mode,개발자 모드,translate,
+Background Jobs,백그라운드 작업,translate,
+Job,작업,translate,
+Queue,대기열,translate,
+Scheduler,스케줄러,translate,
+Token,토큰,translate,
+API Key,API 키,translate,
+API Secret,API 시크릿,translate,
+Two Factor Authentication,2단계 인증,translate,"Two Factor 출현 10건"
+Social Login,소셜 로그인,translate,
+# ── Frappe DocType 이름 중 일반 개념 (R5 결정: 번역) ──,,,
+Web Form,웹 폼,translate,
+Web Page,웹 페이지,translate,
+Website,웹사이트,translate,
+Kanban Board,칸반 보드,translate,
+Dashboard Chart,대시보드 차트,translate,
+Number Card,숫자 카드,translate,
+Auto Repeat,자동 반복,translate,
+Workflow State,워크플로우 상태,translate,
+Workflow Action,워크플로우 작업,translate,
+Data Import,데이터 가져오기,translate,
+Prepared Report,사전 생성 보고서,translate,
+User Permission,사용자 권한,translate,
+User Permissions,사용자 권한,translate,
+Role Profile,역할 프로필,translate,
+Module Profile,모듈 프로필,translate,
+Desk,데스크,translate,
+Dock,독,translate,"v16 신규"
+Tree,트리,translate,
+Naming Rule,명명 규칙,translate,
+Depends On,표시 조건,translate,"Mandatory/Read Only Depends On은 '필수 조건'/'읽기 전용 조건'"
+Fetch From,값 가져오기,translate,
+In List View,목록 보기에 표시,translate,
+In Standard Filter,표준 필터에 표시,translate,
+In Global Search,전체 검색에 포함,translate,
+Translatable,번역 가능,translate,
+Unique,고유,translate,
+Precision,정밀도,translate,
+Collapsible,접기 가능,translate,
+Quick Entry,빠른 입력,translate,
+Track Changes,변경 추적,translate,
+# ── 맥락 의존 (가이드 5-1) ──,,,
+Order,순서,context,"v16 frappe에서는 Kanban Board Column의 order(순서) 1곳뿐"
+Post,게시,context,"discussions 템플릿(웹)"
+Single,Single,context,"DocType 유형(is_single)일 때 Single 유지, 일반 의미는 '단일'. 단독 msgid 없음"
+Site,사이트,context,"bench 명령/설정 맥락이면 Site 유지. v16 UI 출현은 일반 의미뿐"
+App,앱,context,"R6 결정: 앱"
+Patch,Patch,context,"Patch Log/Package Release의 patch. Package Release는 버전 번호(패치)라 '패치'"
+Series,시리즈,context,"naming 설정 UI. Naming Series 전체 구문은 keep"
+# ── 필드 유형 (가이드 2장, R1 결정: 공용 msgid 18종은 위 translate/keep으로 이동) ──,,,
+Autocomplete,Autocomplete (자동 완성),fieldtype,
+Attach,Attach (첨부),fieldtype,"R1 결정: 형식 적용 (공용 사용처도 fieldtype 선택지)"
+Attach Image,Attach Image (이미지 첨부),fieldtype,
+Attachment Gallery,Attachment Gallery (첨부 갤러리),fieldtype,"v16 신규. 가이드 표에 없어 추가"
+Barcode,Barcode (바코드),fieldtype,
+Button,Button (버튼),fieldtype,
+Check,Check (체크),fieldtype,
+Code,코드,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Color,색상,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Column Break,Column Break (열 구분),fieldtype,
+Currency,통화,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Data,데이터,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Date,날짜,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Datetime,Datetime (날짜시간),fieldtype,
+Duration,기간,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Dynamic Link,Dynamic Link (동적 링크),fieldtype,
+Float,Float (실수),fieldtype,
+Fold,Fold (접기),fieldtype,
+Geolocation,Geolocation (위치),fieldtype,
+Heading,제목,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+HTML Editor,HTML Editor (HTML 편집기),fieldtype,
+Icon,아이콘,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Image,이미지,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Int,Int (정수),fieldtype,
+Link,링크,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Long Text,Long Text (긴 텍스트),fieldtype,
+Markdown Editor,Markdown Editor (마크다운 편집기),fieldtype,
+Password,비밀번호,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Percent,Percent (백분율),fieldtype,
+Phone,전화번호,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Read Only,Read Only (읽기 전용),fieldtype,"R1 결정: 형식 적용 (공용 사용처도 fieldtype 선택지)"
+Rating,Rating (평점),fieldtype,
+Section Break,Section Break (섹션 구분),fieldtype,
+Select,선택,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Signature,서명,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Small Text,Small Text (짧은 텍스트),fieldtype,
+Tab Break,Tab Break (탭 구분),fieldtype,
+Table,테이블,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+Table MultiSelect,Table MultiSelect (테이블 다중 선택),fieldtype,
+Text,Text (텍스트),fieldtype,
+Text Editor,Text Editor (텍스트 편집기),fieldtype,
+Time,시간,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
