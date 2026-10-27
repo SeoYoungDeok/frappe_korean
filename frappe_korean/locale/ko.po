@@ -1,7 +1,7 @@
-# Korean translations for frappe_korean.
-# Copyright (C) 2026 ORGANIZATION
-# This file is distributed under the same license as the frappe_korean project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# Korean translations for Frappe Framework (frappe_korean override).
+# Copyright (C) 2026 SeoYoungDeok
+# Source strings (msgid) are from Frappe Framework, Copyright (C) Frappe Technologies Pvt. Ltd., MIT License.
+# This file is distributed under the MIT License.
 #
 msgid ""
 msgstr ""
