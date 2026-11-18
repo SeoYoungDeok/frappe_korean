@@ -132,6 +132,9 @@
 | `Discard?` | 폐기할까요? | A5,A10 | 대화상자 제목이라 의문형으로 표기 (리뷰 반영) |
 | `Failed to import virtual doctype {}, is controller file present?` | …있는지 확인하세요. | A12 | 원문 의문문을 확인 안내문으로 변경 (리뷰 반영) |
 | `Please visit https://frappecloud.com/…#encryption-key for more information.` | …참고하세요: https://… | A12 | URL 뒤에 마침표를 붙이면 링크 인식이 깨짐 (리뷰 반영) |
+| `Search fields...` | 필드 검색... | A10 | 검색 입력 힌트(필드를 검색). DocType 속성 'Search Fields'(검색 필드)와 의미가 다름 |
+| `Connection OK` | 연결 성공 | A4 | 연결 테스트 결과 메시지라 OK를 '성공'으로 표기 |
+| `Embedding` | 임베드 | A5 | 웹 폼을 다른 사이트에 삽입(embed)하는 섹션. AI 임베딩과 다른 의미 |
 
 ## LLM 리뷰 결과 (5단계, 2026-10-27)
 
@@ -164,3 +167,50 @@
   - msgctxt가 없어 오버라이드 앱에서는 둘을 나눌 수 없다.
   - 사용 빈도가 높은 좋아요 쪽을 유지했다.
   - 근본 해결책은 업스트림에 msgctxt를 추가해 달라는 PR이다.
+
+## frappe v16.60.1 업그레이드 (2026-11-18)
+
+frappe 기준 커밋: `199a0385c00e572664a099a57a00be6ce7404eeb` (v16.53.0 → v16.60.1)
+
+- 동기화 결과
+  - main.pot은 9,031건이다(이전 7,909건).
+  - 신규 1,148건, 원문이 바뀐 항목(fuzzy) 23건이다.
+  - 삭제된 원문 49건은 obsolete로 표시했고, 다음 업그레이드 때 제거한다.
+- 번역한 1,171건 중 684건이 신규 모듈이다: `flow` 532건(AI 에이전트), `studio` 152건(앱 빌더).
+
+### 신규 용어 (확인 필요)
+
+`glossary_ko.csv` 끝의 "v16.60 신규" 섹션에 추가했다. 사람이 확인하기 전까지는 임시 결정이다.
+
+| 원문 | 번역 | 비고 |
+|---|---|---|
+| Vue Component | Vue Component (Vue 컴포넌트) | 새 필드 유형. 2장 형식 적용 |
+| Flow, Studio, Insights, MCP, SBOM, Island | 영문 유지 | 제품명·프레임워크 개념. DocType 이름은 `Flow 에이전트`, `Studio 페이지`처럼 제품명만 영문으로 둔다 |
+| Flow User, Studio User | 영문 유지 | 역할 이름 (R4) |
+| Agent / Sub-agent | 에이전트 / 하위 에이전트 | |
+| Skill / Tool | 스킬 / 도구 | |
+| Knowledge Base / Chunk / Embedding | 지식 베이스 / 청크 / 임베딩 | 웹 폼의 Embedding 섹션은 `임베드` |
+| Session / Run / Trigger | 세션 / 실행 / 트리거 | |
+| Provider | 제공자 | 리뷰어 의견: AI 맥락에서는 `공급자`도 흔히 쓴다 |
+| Prompt / Memory | 프롬프트 / 메모리 | |
+| Combobox / Mailbox | 콤보박스 / 메일함 | |
+
+- `Flow`는 `context`로 등록했다. 기존 `Automation Flow`(자동화 흐름)와 겹치기 때문이다.
+
+### LLM 리뷰 결과
+
+별도 세션 2개가 표본 469건을 채점했다. 표본 크기는 모듈마다 50건 또는 10% 중 큰 값이고, 그보다 적은 모듈은 전체를 넣었다.
+
+| 표본 | 건수 | a | n | c | s | x | 2점 이하 | 제안 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 234 | 4.99 | 4.94 | 5.00 | 5.00 | 4.99 | 0 | 17 |
+| 2 | 235 | 4.95 | 4.96 | 4.99 | 4.96 | 4.99 | 0 | 19 |
+
+- 전체 평균은 4.98이고, 2점 이하 항목은 없어 통과 기준을 충족했다. 실패율 5%를 넘은 모듈도 없다.
+- 제안 36건 중 33건을 반영했다. 같은 유형의 항목 12건도 함께 고쳤다.
+  - 화면 선택지 값과 일치시켰다: Imported/Script/Server → 가져옴/스크립트/서버, Ask/Auto → 묻기/자동, Restricted/Everyone → 제한됨/모든 사용자.
+  - API discovery는 `검색` 대신 `탐색`으로 바꿨다.
+  - 가능한 곳에서는 병기 조사를 없앴다.
+- 반영하지 않은 제안
+  - `Google Sheet` → `Google 시트`: 프로젝트 전체에서 `Google Sheet(s)`를 영문으로 쓰고 있어 일관성을 위해 유지했다.
+  - `{0}이(가) 아직 wkhtmltopdf를…` → `{0}가`: {0}에 들어가는 값이 바뀌면 조사가 틀릴 수 있어 병기 조사를 유지했다.

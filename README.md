@@ -2,8 +2,8 @@
 
 Frappe Framework v16 한국어(ko) 오버라이드 번역 앱입니다. frappe 저장소를 수정하지 않고, 이 앱의 `frappe_korean/locale/ko.po`가 frappe 기본 번역을 덮어씁니다.
 
-- 기준 버전: frappe v16.53.0 (commit `e8d41dd0061a32ee781caefe5d0b0d2bb7c15362`)
-- 번역: `main.pot` 7,909건 전부
+- 기준 버전: frappe v16.60.1 (commit `199a0385c00e572664a099a57a00be6ce7404eeb`)
+- 번역: `main.pot` 9,031건 전부
 
 ### Installation
 

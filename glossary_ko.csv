@@ -328,3 +328,28 @@ Table MultiSelect,Table MultiSelect (테이블 다중 선택),fieldtype,
 Text,Text (텍스트),fieldtype,
 Text Editor,Text Editor (텍스트 편집기),fieldtype,
 Time,시간,translate,"R1 결정: 일반 라벨 용도 우선. fieldtype 드롭다운에서도 한국어만 표시"
+# ── v16.60 신규 (Flow·Studio·기타, 2026-11-18 추가, 사람 확인 대기) ──,,,
+Vue Component,Vue Component (Vue 컴포넌트),fieldtype,"v16.60 신규 필드 유형"
+Flow,Flow,context,"AI 에이전트 모듈(frappe/flow) 제품명일 때 유지, DocType 이름은 'Flow 에이전트'처럼 Flow만 유지. Automation Flow는 '자동화 흐름'"
+Studio,Studio,keep,"앱 빌더 제품명. DocType 이름은 'Studio 페이지'처럼 Studio만 유지"
+Insights,Insights,keep,"Frappe 제품명"
+MCP,MCP,keep,
+SBOM,SBOM,keep,
+Island,Island,keep,"Frappe UI 페이지 빌드 단위(프레임워크 개념)"
+Flow User,Flow User,keep,"역할 이름 (R4)"
+Studio User,Studio User,keep,"역할 이름 (R4)"
+Agent,에이전트,translate,
+Sub-agent,하위 에이전트,translate,
+Skill,스킬,translate,
+Tool,도구,translate,
+Knowledge Base,지식 베이스,translate,
+Chunk,청크,translate,
+Embedding,임베딩,context,"AI 벡터 의미. 웹 폼을 다른 페이지에 넣는 Embedding 섹션은 '임베드'"
+Session,세션,translate,
+Run,실행,translate,"Flow Run(에이전트 실행 기록)"
+Trigger,트리거,translate,
+Provider,제공자,translate,
+Prompt,프롬프트,translate,
+Memory,메모리,translate,
+Combobox,콤보박스,translate,
+Mailbox,메일함,translate,
